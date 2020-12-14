@@ -26,7 +26,7 @@ public class BootStrapData implements CommandLineRunner {
     public void run(String... args) throws Exception {
 
 
-        Publisher puffin = new Publisher("1 Happy Rd", "Wellington", "Wellington", "9092");
+        Publisher puffin = new Publisher("Puffin","1 Happy Rd", "Wellington", "Wellington", "9092");
         publisherRepository.save(puffin);
 
         Author eric = new Author("Eric","Evans");

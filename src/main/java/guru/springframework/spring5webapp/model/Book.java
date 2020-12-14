@@ -28,6 +28,17 @@ public class Book {
     @ManyToOne
     private Publisher publisher;
 
+    public Book() {
+    }
+
+    public Book(Long id, String title, String isbn, Set<Author> authors, Publisher publisher) {
+        this.id = id;
+        this.title = title;
+        this.isbn = isbn;
+        this.authors = authors;
+        this.publisher = publisher;
+    }
+
     public Book(String title, String isbn) {
         this.title = title;
         this.isbn = isbn;
@@ -39,7 +50,6 @@ public class Book {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", isbn='" + isbn + '\'' +
-                ", authors=" + authors +
                 '}';
     }
 
